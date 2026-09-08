@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Never App</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent: #2ea043;
+            --accent-glow: rgba(46, 160, 67, 0.15);
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-family);
+            line-height: 1.6;
+            padding: 24px 16px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0 30px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            background: var(--accent-glow);
+            border: 1px solid var(--accent);
+            border-radius: 16px;
+            color: var(--accent);
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .lang-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover, .lang-btn.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #ffffff;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        .highlight-box {
+            background: var(--accent-glow);
+            border: 1px solid var(--accent);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+
+        .highlight-box p {
+            color: var(--text-primary);
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: var(--accent);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        p {
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 12px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+            font-size: 15px;
+        }
+
+        li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .contact-card {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .email-link {
+            display: inline-block;
+            margin-top: 8px;
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 16px;
+            background: var(--accent-glow);
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: 1px solid var(--accent);
+            transition: opacity 0.2s;
+        }
+
+        .email-link:hover {
+            opacity: 0.85;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: var(--text-secondary);
+            font-size: 13px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="logo">N</div>
+        <h1>Never App</h1>
+        <p class="subtitle">Informativa sulla Privacy &middot; Privacy Policy</p>
+        <p class="subtitle" style="margin-top: 4px;">Ultimo aggiornamento / Last updated: 8 Settembre 2026</p>
+
+        <div class="lang-switch">
+            <button class="lang-btn active" id="btn-it" onclick="switchLang('it')">🇮🇹 Italiano</button>
+            <button class="lang-btn" id="btn-en" onclick="switchLang('en')">🇬🇧 English</button>
+        </div>
+    </header>
+
+    <!-- SEZIONE ITALIANO -->
+    <main id="content-it">
+        <div class="highlight-box">
+            <p>🛡️ <strong>100% Locale &amp; Privacy-First:</strong> Never non raccoglie, non memorizza su server remoti e non trasmette a terzi alcun dato personale o di utilizzo. Tutti i tuoi dati restano esclusivamente sul tuo dispositivo.</p>
+        </div>
+
+        <section class="card">
+            <h2>1. Panoramica Generale</h2>
+            <p>L'applicazione <strong>Never</strong> è dedicata al monitoraggio, alla registrazione e alla pianificazione degli allenamenti fisici e del calisthenics. È progettata secondo il rigoroso principio di <em>Privacy by Design</em> e archiviazione esclusivamente locale.</p>
+        </section>
+
+        <section class="card">
+            <h2>2. Dati Raccolti e Trattamento</h2>
+            <ul>
+                <li><strong>Nessuna Raccolta Dati Remota:</strong> Non è richiesta alcuna registrazione, login o creazione di account online.</li>
+                <li><strong>Archiviazione Locale:</strong> Tutte le schede di allenamento, serie, ripetizioni, pesi, note ed impostazioni sono salvate solo nella memoria del tuo dispositivo.</li>
+                <li><strong>Crittografia Hardware:</strong> Il database locale è protetto da cifratura gestita in modo sicuro tramite Android Keystore.</li>
+                <li><strong>Nessun Permesso Internet:</strong> L'applicazione non contiene il permesso <code>android.permission.INTERNET</code>. È tecnicamente impossibile trasmettere dati all'esterno.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>3. Tracciamento, Pubblicità e Terze Parti</h2>
+            <ul>
+                <li><strong>Zero Tracker:</strong> Nessun utilizzo di Google Analytics, Facebook Pixel, Firebase Analytics o sistemi simili.</li>
+                <li><strong>Nessuna Pubblicità:</strong> L'app è completamente priva di banner o annunci pubblicitari.</li>
+                <li><strong>Nessuna Condivisione:</strong> Nessun dato viene mai condiviso, commercializzato o analizzato da terze parti.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>4. Permessi del Dispositivo</h2>
+            <p>I permessi richiesti sono strettamente limitati alle funzioni dell'app:</p>
+            <ul>
+                <li><strong>Notifiche (POST_NOTIFICATIONS):</strong> Mostra il cronometro attivo o l'avviso di fine recupero nella barra notifiche.</li>
+                <li><strong>Allarmi Esatti (SCHEDULE_EXACT_ALARM):</strong> Garantisce la precisione al secondo nei timer di recupero tra le serie.</li>
+                <li><strong>Servizio Foreground (specialUse):</strong> Mantiene attivo il cronometro/timer quando l'app è in background o su schermata di blocco.</li>
+                <li><strong>Vibrazione (VIBRATE):</strong> Avvisa con feedback aptico al termine del recupero impostato.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>5. Cancellazione e Controllo dei Dati</h2>
+            <ul>
+                <li><strong>Pulsante in-app:</strong> Puoi cancellare definitivamente tutti i dati in qualsiasi momento da <em>Impostazioni &gt; Privacy e Dati &gt; Elimina tutti i dati</em>.</li>
+                <li><strong>Disinstallazione:</strong> Rimuovendo l'applicazione dal dispositivo, tutti i database locali vengono distrutti in modo istantaneo e irreversibile.</li>
+            </ul>
+        </section>
+
+        <section class="card contact-card">
+            <h2>6. Contatti Sviluppatore</h2>
+            <p>Per qualsiasi informazione o supporto tecnico relativo alla privacy:</p>
+            <a class="email-link" href="mailto:never.studio.dev@gmail.com">never.studio.dev@gmail.com</a>
+        </section>
+    </main>
+
+    <!-- SEZIONE INGLESE -->
+    <main id="content-en" class="hidden">
+        <div class="highlight-box">
+            <p>🛡️ <strong>100% Local &amp; Privacy-First:</strong> Never does not collect, store on remote servers, or transmit to third parties any personal or usage data. All your data stays strictly on your physical device.</p>
+        </div>
+
+        <section class="card">
+            <h2>1. General Overview</h2>
+            <p>The <strong>Never</strong> application is designed for workout tracking, calisthenics, and fitness planning, built following strict <em>Privacy by Design</em> principles and 100% local-first storage.</p>
+        </section>
+
+        <section class="card">
+            <h2>2. Data Collection and Processing</h2>
+            <ul>
+                <li><strong>No Remote Data Collection:</strong> No registration, login, or cloud accounts are required or supported.</li>
+                <li><strong>Strictly Local Storage:</strong> Workout plans, sets, reps, weights, notes, and settings are saved exclusively on your device.</li>
+                <li><strong>Hardware Encryption:</strong> The local database is protected by hardware-backed encryption via Android Keystore.</li>
+                <li><strong>No Internet Permission:</strong> The app does not declare or use <code>android.permission.INTERNET</code>. Transmission over the network is physically impossible.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>3. Tracking, Ads, and Analytics</h2>
+            <ul>
+                <li><strong>Zero Trackers:</strong> No analytics SDKs (Google Analytics, Firebase, Facebook SDK, etc.).</li>
+                <li><strong>No Advertisements:</strong> The application is completely ad-free.</li>
+                <li><strong>Zero Data Sharing:</strong> No information is ever sold, monitored, or shared with third parties.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>4. Requested Device Permissions</h2>
+            <p>Permissions requested are solely required for core workout functions:</p>
+            <ul>
+                <li><strong>Notifications (POST_NOTIFICATIONS):</strong> Displays ongoing timers and rest-end countdowns in the status bar.</li>
+                <li><strong>Exact Alarms (SCHEDULE_EXACT_ALARM):</strong> Guarantees precise second-accurate rest alerts between workout sets.</li>
+                <li><strong>Foreground Service (specialUse):</strong> Keeps the active timer running while the app is backgrounded or screen is locked.</li>
+                <li><strong>Vibration (VIBRATE):</strong> Provides tactile alerts when a rest timer completes.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>5. Data Deletion and User Control</h2>
+            <ul>
+                <li><strong>In-app deletion:</strong> You can permanently wipe all records anytime via <em>Settings &gt; Privacy &amp; Data &gt; Delete all data</em>.</li>
+                <li><strong>Uninstallation:</strong> Uninstalling the app permanently and irreversibly erases all local databases and preferences.</li>
+            </ul>
+        </section>
+
+        <section class="card contact-card">
+            <h2>6. Developer Contact</h2>
+            <p>For questions or privacy inquiries, please contact:</p>
+            <a class="email-link" href="mailto:never.studio.dev@gmail.com">never.studio.dev@gmail.com</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Never Studio. All rights reserved.</p>
+    </footer>
+</div>
+
+<script>
+    function switchLang(lang) {
+        const itContent = document.getElementById('content-it');
+        const enContent = document.getElementById('content-en');
+        const itBtn = document.getElementById('btn-it');
+        const enBtn = document.getElementById('btn-en');
+
+        if (lang === 'it') {
+            itContent.classList.remove('hidden');
+            enContent.classList.add('hidden');
+            itBtn.classList.add('active');
+            enBtn.classList.remove('active');
+        } else {
+            itContent.classList.add('hidden');
+            enContent.classList.remove('hidden');
+            itBtn.classList.remove('active');
+            enBtn.classList.add('active');
+        }
+    }
+</script>
+
+</body>
+</html>
