@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,36 +66,6 @@
             font-size: 18px;
             font-weight: 700;
             letter-spacing: -0.02em;
-        }
-
-        /* Minimalist Language Switcher */
-        .lang-switch {
-            display: inline-flex;
-            background: #161b22;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 2px;
-        }
-
-        .lang-btn {
-            background: transparent;
-            border: none;
-            color: var(--text-muted);
-            padding: 5px 12px;
-            font-size: 13px;
-            font-weight: 600;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.15s ease;
-        }
-
-        .lang-btn:hover {
-            color: var(--text-main);
-        }
-
-        .lang-btn.active {
-            background: #21262d;
-            color: #ffffff;
         }
 
         /* Document Header */
@@ -192,10 +162,6 @@
             gap: 12px;
         }
 
-        .hidden {
-            display: none;
-        }
-
         @media (max-width: 600px) {
             h1 {
                 font-size: 28px;
@@ -213,11 +179,11 @@
     <!-- Top Navigation Bar -->
     <header class="top-bar">
         <div class="brand">
-            <!-- App Icon SVG (Derived from official app launcher vectors) -->
+            <!-- App Icon SVG (Calibrated official gradient) -->
             <svg class="app-icon" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="108" height="108" rx="24" fill="#000000"/>
                 <defs>
-                    <linearGradient id="logoGrad" x1="30" y1="245" x2="639" y2="245" gradientUnits="userSpaceOnUse">
+                    <linearGradient id="logoGrad" x1="0%" y1="50%" x2="100%" y2="50%">
                         <stop offset="0%" stop-color="#34B65B"/>
                         <stop offset="35%" stop-color="#46C05F"/>
                         <stop offset="48%" stop-color="#E4E4E4"/>
@@ -231,80 +197,13 @@
             </svg>
             <span class="brand-name">Never</span>
         </div>
-
-        <nav class="lang-switch">
-            <button class="lang-btn active" id="btn-it" onclick="switchLang('it')">Italiano</button>
-            <button class="lang-btn" id="btn-en" onclick="switchLang('en')">English</button>
-        </nav>
     </header>
 
-    <!-- ITALIAN CONTENT -->
-    <main id="content-it">
-        <div class="doc-header">
-            <h1>Informativa sulla Privacy</h1>
-            <p class="meta-info">Data di efficacia: 8 Settembre 2026 &middot; Applicazione Never &middot; Versione 1.0</p>
-        </div>
-
-        <section>
-            <h2>1. Premessa e Principi Generali</h2>
-            <p>La presente Informativa sulla Privacy disciplina le modalità di trattamento e protezione dei dati personali adottate dall'applicazione mobile <strong>Never</strong> (di seguito "l'Applicazione").</p>
-            <p>L'Applicazione è progettata ed erogata secondo un modello architetturale rigorosamente <em>Local-First</em> e conforme ai principi di <em>Privacy by Design</em> e <em>Privacy by Default</em> sanciti dal Regolamento Generale sulla Protezione dei Dati (GDPR - Regolamento UE 2016/679) e dalle direttive Google Play Data Safety.</p>
-        </section>
-
-        <section>
-            <h2>2. Raccolta Dati e Archiviazione Locale</h2>
-            <p>L'Applicazione opera in assenza totale di trasmissione dati remota:</p>
-            <ul>
-                <li><strong>Assenza di Account e Server Cloud:</strong> L'Applicazione non richiede, non incentiva e non prevede procedure di registrazione, autenticazione utente o sincronizzazione con infrastrutture cloud esterne.</li>
-                <li><strong>Archiviazione Esclusiva sul Dispositivo:</strong> Tutti i dati inseriti dall'utente — ivi compresi a titolo esemplificativo schede di allenamento, routine, serie, ripetizioni, carichi, note personali e parametri di configurazione — risiedono unicamente all'interno della memoria di archiviazione locale del dispositivo in uso.</li>
-                <li><strong>Crittografia Locale:</strong> Le informazioni archiviate localmente sono protette mediante cifratura hardware gestita dall'infrastruttura sicura Android Keystore.</li>
-                <li><strong>Inesistenza del Permesso di Rete:</strong> Il codice sorgente dell'Applicazione non include né richiede il permesso <code>android.permission.INTERNET</code> nel file di configurazione <code>AndroidManifest.xml</code>. È tecnicamente impossibile per l'Applicazione effettuare comunicazioni telematiche, inviare pacchetti dati o stabilire connessioni remote verso l'esterno.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>3. Tracciamento, Pubblicità e Terze Parti</h2>
-            <p>Nell'ambito dell'architettura dell'Applicazione si specifica quanto segue:</p>
-            <ul>
-                <li><strong>Assenza di Tracker e Analytics:</strong> L'Applicazione non integra librerie, kit di sviluppo software (SDK) o strumenti di telemetria e profilazione (inclusi, ma non limitati a, Google Analytics, Firebase Analytics, Meta Pixel o assimilabili).</li>
-                <li><strong>Assenza di Contenuti Pubblicitari:</strong> L'Applicazione è interamente priva di annunci pubblicitari, network di monetizzazione terzi e sistemi di tracciamento comportamentale.</li>
-                <li><strong>Nessun Trasferimento Dati:</strong> Nessun dato utente viene ceduto, concesso in licenza, aggregato, monetizzato o reso accessibile a soggetti terzi.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>4. Permessi del Sistema Operativo Android</h2>
-            <p>L'Applicazione richiede l'autorizzazione all'utilizzo di determinati permessi del sistema operativo Android, circoscritti e indispensabili alle sole funzionalità di cronometraggio e promemoria:</p>
-            <ul>
-                <li><strong><code>POST_NOTIFICATIONS</code>:</strong> Consente la pubblicazione dello stato attivo del cronometro, del timer di intervallo e degli avvisi di completamento del recupero nella barra delle notifiche di sistema.</li>
-                <li><strong><code>SCHEDULE_EXACT_ALARM</code>:</strong> Impiegato per pianificare avvisi temporizzati ad altissima precisione al secondo durante i recuperi tra le serie di esercizi e per i promemoria delle sessioni programmate dall'utente.</li>
-                <li><strong><code>FOREGROUND_SERVICE (specialUse)</code>:</strong> Consente l'esecuzione continua e affidabile del timer di sessione in background e l'aggiornamento dell'interfaccia interattiva Now Bar su dispositivi supportati quando lo schermo è bloccato o l'app non è in primo piano.</li>
-                <li><strong><code>VIBRATE</code>:</strong> Utilizzato per azionare l'attuatore aptico del dispositivo allo scadere di un conto alla rovescia o all'avvio di un nuovo set.</li>
-            </ul>
-            <p>Nessuno dei permessi sopraelencati accede, monitora o acquisisce identificativi personali, contatti, posizione geografica o file dell'utente.</p>
-        </section>
-
-        <section>
-            <h2>5. Cancellazione e Controllo dei Dati</h2>
-            <p>In conformità ai requisiti di trasparenza e controllo dei dati previsti dagli standard Google Play e dalla normativa applicabile:</p>
-            <ul>
-                <li><strong>Cancellazione Immediata in-app:</strong> L'utente può procedere in qualsiasi istante all'azzeramento integrale e definitivo di tutti i dati memorizzati navigando nella schermata <em>Impostazioni &gt; Privacy e Dati &gt; Elimina tutti i dati</em>.</li>
-                <li><strong>Disinstallazione dell'Applicazione:</strong> La rimozione dell'Applicazione dal dispositivo comporta la cancellazione automatica, immediata e non reversibile di tutti i database locali, delle preferenze e delle tabelle create sul file system del dispositivo.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>6. Titolare del Trattamento e Contatti</h2>
-            <p>Per quesiti, delucidazioni legali o segnalazioni inerenti alla presente informativa e alla sicurezza dei dati, è possibile rivolgersi al titolare dello sviluppo all'indirizzo istituzionale:</p>
-            <p><a href="mailto:never.studio.dev@gmail.com">never.studio.dev@gmail.com</a></p>
-        </section>
-    </main>
-
-    <!-- ENGLISH CONTENT -->
-    <main id="content-en" class="hidden">
+    <!-- ENGLISH PRIVACY POLICY DOCUMENT -->
+    <main>
         <div class="doc-header">
             <h1>Privacy Policy</h1>
-            <p class="meta-info">Effective Date: September 8, 2026 &middot; Application: Never &middot; Version 1.0</p>
+            <p class="meta-info">Effective Date: September 15, 2026 &middot; Application: Never &middot; Version 1.0</p>
         </div>
 
         <section>
@@ -318,8 +217,8 @@
             <p>The Application operates without any remote data transmission:</p>
             <ul>
                 <li><strong>No User Accounts or Cloud Servers:</strong> The Application does not support, require, or maintain user registration, authentication credentials, or proprietary cloud synchronization.</li>
-                <li><strong>Exclusively On-Device Storage:</strong> All user-generated content — including workout routines, exercise plans, sets, repetitions, weight records, notes, and preferences — is stored strictly within the physical device's local storage.</li>
-                <li><strong>Local Hardware Encryption:</strong> Local application databases are secured utilizing hardware-backed cryptographic protection managed by the Android Keystore system.</li>
+                <li><strong>Exclusively On-Device Storage:</strong> All user-generated content — including workout routines, exercise plans, sets, repetitions, weight records, personal notes, preferences, and optional profile pictures (stored solely within the app's local sandbox storage for UI avatar display, without any external server transmission) — is stored strictly within the physical device's local storage.</li>
+                <li><strong>Hardware-Backed Encryption:</strong> Local application databases are secured utilizing hardware-backed AES-256 encryption (via SQLCipher) with cryptographic keys managed by the Android Keystore system.</li>
                 <li><strong>Absence of Network Permissions:</strong> The Application does not declare or request the <code>android.permission.INTERNET</code> permission in its <code>AndroidManifest.xml</code> manifest. It is technically impossible for the Application to open socket connections, transmit telemetry, or transfer data over external networks.</li>
             </ul>
         </section>
@@ -350,7 +249,7 @@
             <h2>5. Data Deletion and User Rights</h2>
             <p>In adherence to Google Play policies and statutory data protection rights:</p>
             <ul>
-                <li><strong>In-App Data Purge:</strong> Users can permanently and instantaneously wipe all stored records at any time via <em>Settings &gt; Privacy &amp; Data &gt; Delete all data</em>.</li>
+                <li><strong>In-App Data Purge:</strong> Users can permanently and instantaneously wipe all stored records and files (including database entries, preferences, and local profile photos) at any time via <em>Settings &gt; Privacy &amp; Data &gt; Delete all data</em>.</li>
                 <li><strong>Application Uninstallation:</strong> Uninstalling the Application from the operating system irreversibly and automatically erases all local database records, preferences, and cached application files.</li>
             </ul>
         </section>
@@ -368,27 +267,6 @@
     </footer>
 
 </div>
-
-<script>
-    function switchLang(lang) {
-        const itContent = document.getElementById('content-it');
-        const enContent = document.getElementById('content-en');
-        const itBtn = document.getElementById('btn-it');
-        const enBtn = document.getElementById('btn-en');
-
-        if (lang === 'it') {
-            itContent.classList.remove('hidden');
-            enContent.classList.add('hidden');
-            itBtn.classList.add('active');
-            enBtn.classList.remove('active');
-        } else {
-            itContent.classList.add('hidden');
-            enContent.classList.remove('hidden');
-            itBtn.classList.remove('active');
-            enBtn.classList.add('active');
-        }
-    }
-</script>
 
 </body>
 </html>
