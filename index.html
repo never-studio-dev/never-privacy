@@ -203,7 +203,7 @@
     <main>
         <div class="doc-header">
             <h1>Privacy Policy</h1>
-            <p class="meta-info">Effective Date: September 15, 2026 &middot; Application: Never &middot; Version 1.0</p>
+            <p class="meta-info">Effective Date: September 17, 2026 &middot; Application: Never &middot; Version 1.0</p>
         </div>
 
         <section>
@@ -219,12 +219,22 @@
                 <li><strong>No User Accounts or Cloud Servers:</strong> The Application does not support, require, or maintain user registration, authentication credentials, or proprietary cloud synchronization.</li>
                 <li><strong>Exclusively On-Device Storage:</strong> All user-generated content — including workout routines, exercise plans, sets, repetitions, weight records, personal notes, preferences, and optional profile pictures (stored solely within the app's local sandbox storage for UI avatar display, without any external server transmission) — is stored strictly within the physical device's local storage.</li>
                 <li><strong>Hardware-Backed Encryption:</strong> Local application databases are secured utilizing hardware-backed AES-256 encryption (via SQLCipher) with cryptographic keys managed by the Android Keystore system.</li>
-                <li><strong>Absence of Network Permissions:</strong> The Application does not declare or request the <code>android.permission.INTERNET</code> permission in its <code>AndroidManifest.xml</code> manifest. It is technically impossible for the Application to open socket connections, transmit telemetry, or transfer data over external networks.</li>
+                <li><strong>Absence of Network Permissions:</strong> The Application does not declare or request the <code>android.permission.INTERNET</code> permission in its <code>AndroidManifest.xml</code> manifest. It is technically impossible for the Application to open socket connections, transmit telemetry, or transfer data over external networks in the background.</li>
             </ul>
         </section>
 
         <section>
-            <h2>3. Tracking, Advertisements, and Third Parties</h2>
+            <h2>3. Voluntary Support and User Communications</h2>
+            <p>The Application includes features allowing users to voluntarily reach out for customer support, bug reporting, feature proposals, and exercise database corrections:</p>
+            <ul>
+                <li><strong>User-Initiated Communication:</strong> Contacting support is entirely voluntary and is executed exclusively through external email client applications installed on the user's device via standard <code>mailto:</code> system intents. The Application itself does not directly transmit email messages or connect to external mail servers.</li>
+                <li><strong>Pre-Filled Diagnostic Information:</strong> To assist in troubleshooting technical bugs and crash reports, the Application pre-populates the generated draft email with non-personal technical diagnostic parameters (device manufacturer/model, Android OS version, app version, and selected category). Users retain complete control over the draft email and may review, edit, or delete any information prior to sending.</li>
+                <li><strong>Purpose of Use:</strong> Any information received via email is utilized strictly for technical troubleshooting, customer assistance, and improving the Application. Inquiries and contact details are never sold, rented, leased, or shared with third parties.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Tracking, Advertisements, and Third Parties</h2>
             <p>Regarding third-party integrations and analytics:</p>
             <ul>
                 <li><strong>Zero Trackers and Analytics:</strong> The Application does not incorporate third-party tracking libraries, SDKs, or profiling tools (such as Google Analytics, Firebase Analytics, Meta Pixel, or commercial equivalents).</li>
@@ -234,28 +244,30 @@
         </section>
 
         <section>
-            <h2>4. Android Operating System Permissions</h2>
-            <p>The Application requests system permissions solely for the mechanical operation of workout timers and reminders:</p>
+            <h2>5. Android Operating System Permissions</h2>
+            <p>The Application requests system permissions solely for the mechanical operation of workout timers, reminders, and system continuity:</p>
             <ul>
                 <li><strong><code>POST_NOTIFICATIONS</code>:</strong> Allows ongoing status bar and lockscreen updates for active chronometers, countdowns, and rest-completion alerts.</li>
-                <li><strong><code>SCHEDULE_EXACT_ALARM</code>:</strong> Required to schedule second-accurate rest alerts between workout sets and planned daily workout reminders.</li>
+                <li><strong><code>POST_PROMOTED_NOTIFICATIONS</code>:</strong> Enables prioritized delivery of workout notifications on compatible Android versions.</li>
+                <li><strong><code>SCHEDULE_EXACT_ALARM</code>:</strong> Required to schedule second-accurate rest alerts between workout sets and planned daily workout reminders in compliance with Google Play alarms policy.</li>
+                <li><strong><code>RECEIVE_BOOT_COMPLETED</code>:</strong> Used solely to restore and reschedule active reminder alarms after the device is rebooted.</li>
                 <li><strong><code>FOREGROUND_SERVICE (specialUse)</code>:</strong> Ensures persistent, uninterrupted timer execution while the Application is minimized or the screen is locked, including interactive controls on supported lockscreen surfaces.</li>
                 <li><strong><code>VIBRATE</code>:</strong> Triggers device haptic feedback when a countdown concludes.</li>
             </ul>
-            <p>None of the permissions listed above access personal identification, location coordinates, address books, or external user files.</p>
+            <p>None of the permissions listed above access personal identification, location coordinates, address books, media libraries, or external user files.</p>
         </section>
 
         <section>
-            <h2>5. Data Deletion and User Rights</h2>
-            <p>In adherence to Google Play policies and statutory data protection rights:</p>
+            <h2>6. Data Deletion and User Rights</h2>
+            <p>In adherence to Google Play policies and statutory data protection rights (GDPR):</p>
             <ul>
-                <li><strong>In-App Data Purge:</strong> Users can permanently and instantaneously wipe all stored records and files (including database entries, preferences, and local profile photos) at any time via <em>Settings &gt; Privacy &amp; Data &gt; Delete all data</em>.</li>
+                <li><strong>In-App Data Purge:</strong> Users can permanently and instantaneously wipe all stored records and files (including database entries, preferences, and local profile photos) at any time via <em>Settings &gt; Privacy &amp; Data &gt; Local Data Deletion (Delete all data)</em>.</li>
                 <li><strong>Application Uninstallation:</strong> Uninstalling the Application from the operating system irreversibly and automatically erases all local database records, preferences, and cached application files.</li>
             </ul>
         </section>
 
         <section>
-            <h2>6. Developer Contact</h2>
+            <h2>7. Developer Contact</h2>
             <p>For any inquiries, feedback, or legal questions concerning this Privacy Policy, please contact the developer at:</p>
             <p><a href="mailto:never.studio.dev@gmail.com">never.studio.dev@gmail.com</a></p>
         </section>
