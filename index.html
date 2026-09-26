@@ -203,7 +203,7 @@
     <main>
         <div class="doc-header">
             <h1>Privacy Policy</h1>
-            <p class="meta-info">Effective Date: September 17, 2026 &middot; Application: Never &middot; Version 1.0</p>
+            <p class="meta-info">Effective Date: September 26, 2026 &middot; Application: Never &middot; Version 1.1.0</p>
         </div>
 
         <section>
@@ -218,7 +218,7 @@
             <ul>
                 <li><strong>No User Accounts or Cloud Servers:</strong> The Application does not support, require, or maintain user registration, authentication credentials, or proprietary cloud synchronization.</li>
                 <li><strong>Exclusively On-Device Storage:</strong> All user-generated content — including workout routines, exercise plans, sets, repetitions, weight records, personal notes, preferences, and optional profile pictures (stored solely within the app's local sandbox storage for UI avatar display, without any external server transmission) — is stored strictly within the physical device's local storage.</li>
-                <li><strong>Hardware-Backed Encryption:</strong> Local application databases are secured utilizing hardware-backed AES-256 encryption (via SQLCipher) with cryptographic keys managed by the Android Keystore system.</li>
+                <li><strong>Isolated Sandbox Storage:</strong> All application data is stored in the application's private, sandboxed internal storage directory. Under Android's Linux kernel-level sandboxing security model, other applications and unauthorized users cannot access, read, or modify Never's private database.</li>
                 <li><strong>Absence of Network Permissions:</strong> The Application does not declare or request the <code>android.permission.INTERNET</code> permission in its <code>AndroidManifest.xml</code> manifest. It is technically impossible for the Application to open socket connections, transmit telemetry, or transfer data over external networks in the background.</li>
             </ul>
         </section>
