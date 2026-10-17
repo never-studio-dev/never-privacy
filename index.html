@@ -203,7 +203,7 @@
     <main>
         <div class="doc-header">
             <h1>Privacy Policy</h1>
-            <p class="meta-info">Effective Date: September 26, 2026 &middot; Application: Never &middot; Version 1.1.0</p>
+            <p class="meta-info">Effective Date: October 17, 2026 &middot; Application: Never &middot; Version 1.1.0</p>
         </div>
 
         <section>
@@ -214,12 +214,12 @@
 
         <section>
             <h2>2. Data Collection and Local Storage</h2>
-            <p>The Application operates without any remote data transmission:</p>
+            <p>The Application operates without any remote personal data transmission:</p>
             <ul>
                 <li><strong>No User Accounts or Cloud Servers:</strong> The Application does not support, require, or maintain user registration, authentication credentials, or proprietary cloud synchronization.</li>
                 <li><strong>Exclusively On-Device Storage:</strong> All user-generated content — including workout routines, exercise plans, sets, repetitions, weight records, personal notes, preferences, and optional profile pictures (stored solely within the app's local sandbox storage for UI avatar display, without any external server transmission) — is stored strictly within the physical device's local storage.</li>
                 <li><strong>Isolated Sandbox Storage:</strong> All application data is stored in the application's private, sandboxed internal storage directory. Under Android's Linux kernel-level sandboxing security model, other applications and unauthorized users cannot access, read, or modify Never's private database.</li>
-                <li><strong>Absence of Network Permissions:</strong> The Application does not declare or request the <code>android.permission.INTERNET</code> permission in its <code>AndroidManifest.xml</code> manifest. It is technically impossible for the Application to open socket connections, transmit telemetry, or transfer data over external networks in the background.</li>
+                <li><strong>Network Access &amp; In-App Updates:</strong> The Application declares the <code>android.permission.INTERNET</code> permission exclusively to communicate with official Google Play Store services in order to check for and download application updates (Google Play In-App Updates API). Under no circumstances are your workout data, routines, weight logs, notes, or personal statistics ever transmitted over the network or sent to external servers.</li>
             </ul>
         </section>
 
@@ -247,6 +247,7 @@
             <h2>5. Android Operating System Permissions</h2>
             <p>The Application requests system permissions solely for the mechanical operation of workout timers, reminders, and system continuity:</p>
             <ul>
+                <li><strong><code>INTERNET</code>:</strong> Required solely to communicate with Google Play Store services via the official Google Play Core library to check for and download in-app updates. It is never used to transmit personal user data to remote servers.</li>
                 <li><strong><code>POST_NOTIFICATIONS</code>:</strong> Allows ongoing status bar and lockscreen updates for active chronometers, countdowns, and rest-completion alerts.</li>
                 <li><strong><code>POST_PROMOTED_NOTIFICATIONS</code>:</strong> Enables prioritized delivery of workout notifications on compatible Android versions.</li>
                 <li><strong><code>SCHEDULE_EXACT_ALARM</code>:</strong> Required to schedule second-accurate rest alerts between workout sets and planned daily workout reminders in compliance with Google Play alarms policy.</li>
